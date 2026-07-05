@@ -5,6 +5,7 @@
 :root {
   --color-bg: #ededea;
   --color-text: #111111;
+  --color-text-rgb: 17 17 17;
   --color-muted: rgba(17, 17, 17, 0.55);
   --color-border: rgba(17, 17, 17, 0.12);
   --color-accent: #3e6bff;
@@ -13,6 +14,7 @@
 .dark {
   --color-bg: #0b0b0b;
   --color-text: #f2f2f0;
+  --color-text-rgb: 242 242 240;
   --color-muted: rgba(242, 242, 240, 0.55);
   --color-border: rgba(242, 242, 240, 0.14);
 }
@@ -25,7 +27,11 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-pulseDot {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

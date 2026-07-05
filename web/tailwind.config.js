@@ -10,6 +10,9 @@ export default {
       colors: {
         surface: 'var(--color-bg)',
         ink: 'var(--color-text)',
+        // opacity-modifier-capable variant of `ink` (e.g. text-ink-a/25) for
+        // ghost -> solid text transitions that can't be pre-baked like `muted`
+        'ink-a': 'rgb(var(--color-text-rgb) / <alpha-value>)',
         muted: 'var(--color-muted)',
         hairline: 'var(--color-border)',
         accent: 'var(--color-accent)',

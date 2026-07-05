@@ -1,11 +1,22 @@
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { filterTabsBase, projects, type FilterKey } from '../data';
 
 export default function ProjectGrid() {
   const [filter, setFilter] = useState<FilterKey>('all');
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [pointer, setPointer] = useState<{ x: number; y: number } | null>(null);
 
   const filteredProjects =
     filter === 'all' ? projects : projects.filter((p) => p.tags.includes(filter));
+
+  const handleFilterChange = (key: FilterKey) => {
+    setFilter(key);
+    setActiveIndex(null);
+  };
+
+  const handleListMouseMove = (e: MouseEvent<HTMLUListElement>) => {
+    setPointer({ x: e.clientX, y: e.clientY });
+  };
 
   return (
     <section id="work" aria-label="Work" className="px-12 pt-14 pb-24 border-t border-hairline">
@@ -18,7 +29,7 @@ export default function ProjectGrid() {
       <div
         role="tablist"
         aria-label="Filter work by discipline"
-        className="flex gap-7 flex-wrap mb-11 border-b border-hairline pb-4"
+        className="flex gap-7 flex-wrap mb-4 border-b border-hairline pb-4"
       >
         {filterTabsBase.map((tab) => {
           const active = tab.key === filter;
@@ -27,7 +38,7 @@ export default function ProjectGrid() {
               key={tab.key}
               role="tab"
               aria-selected={active}
-              onClick={() => setFilter(tab.key)}
+              onClick={() => handleFilterChange(tab.key)}
               className={`bg-transparent border-none cursor-pointer font-semibold text-sm pb-1.5 whitespace-nowrap border-b-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
                 active ? 'text-ink border-accent' : 'text-muted border-transparent'
               }`}
@@ -38,29 +49,93 @@ export default function ProjectGrid() {
         })}
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-px bg-surface border border-hairline">
-        {filteredProjects.map((p) => (
-          <div key={p.id} className="bg-surface flex flex-col border border-hairline -m-px">
-            <div
-              aria-hidden="true"
-              className="w-full h-[200px] block bg-hairline/20 flex items-center justify-center text-muted text-xs"
-            >
-              Screenshot
-            </div>
-            <div className="p-[22px] flex flex-col gap-2 flex-1">
-              <div className="font-semibold text-[11px] tracking-[0.06em] uppercase text-accent">
-                {p.domain}
+      <ul className="list-none m-0 p-0" onMouseMove={handleListMouseMove} onMouseLeave={() => setActiveIndex(null)}>
+        {filteredProjects.map((p, i) => {
+          const active = activeIndex === i;
+          return (
+            <li key={p.id} className={`group relative border-t border-hairline last:border-b ${active ? 'z-30' : 'z-0'}`}>
+              <a
+                href="#"
+                onMouseEnter={() => setActiveIndex(i)}
+                onFocus={() => setActiveIndex(i)}
+                onBlur={() => setActiveIndex(null)}
+                className="relative flex items-center py-8 md:py-10 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
+              >
+                <span
+                  aria-hidden="true"
+                  className={`hidden md:inline-block font-semibold text-3xl text-accent transition-all duration-500 ease-out ${
+                    active ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                  }`}
+                >
+                  →
+                </span>
+
+                <div
+                  className={`transition-transform duration-500 ease-out ${
+                    active ? 'translate-x-0 md:translate-x-16' : 'translate-x-0'
+                  }`}
+                >
+                  <div
+                    className={`font-semibold leading-[0.95] tracking-[-0.02em] text-[clamp(2.2rem,5vw,4.5rem)] transition-colors duration-500 ease-out ${
+                      active ? 'text-ink-a/100' : 'text-ink-a/25'
+                    }`}
+                  >
+                    {p.title}
+                  </div>
+
+                  <div
+                    className="grid transition-[grid-template-rows] duration-500 ease-out"
+                    style={{ gridTemplateRows: active ? '1fr' : '0fr' }}
+                  >
+                    <div className="overflow-hidden">
+                      <p
+                        className={`max-w-2xl mt-0 text-[17px] font-medium text-muted transition-opacity duration-500 ease-out ${
+                          active ? 'opacity-100 mt-6' : 'opacity-0'
+                        }`}
+                      >
+                        {p.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              {/* Tilted preview card, desktop only */}
+              <div
+                aria-hidden="true"
+                className={`hidden md:flex pointer-events-none absolute top-1/2 right-[6%] -translate-y-1/2 rotate-[4deg] w-80 aspect-[4/5] flex-col bg-surface border border-hairline shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out ${
+                  active ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                }`}
+              >
+                <div className="p-7 flex flex-col gap-2 flex-1">
+                  <div className="font-semibold text-[11px] tracking-[0.06em] uppercase text-accent">
+                    {p.domain}
+                  </div>
+                  <div className="font-semibold text-lg leading-[1.3]">{p.title}</div>
+                  <div className="flex-1 mt-2 border border-dashed border-hairline flex items-center justify-center text-muted text-xs">
+                    Preview
+                  </div>
+                  <div className="flex justify-between text-xs text-muted mt-2">
+                    <span>{p.meta}</span>
+                    <span className="text-accent font-semibold">{p.cta}</span>
+                  </div>
+                </div>
               </div>
-              <div className="font-semibold text-[17px] leading-[1.3]">{p.title}</div>
-              <div className="text-[13.5px] leading-relaxed text-muted flex-1">{p.desc}</div>
-              <div className="flex justify-between text-xs text-muted mt-2">
-                <span>{p.meta}</span>
-                <span className="text-accent font-semibold">{p.cta}</span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* Cursor-following tooltip, desktop only */}
+      {pointer && activeIndex !== null && (
+        <div
+          aria-hidden="true"
+          className="hidden md:block fixed z-50 pointer-events-none bg-ink text-surface text-sm font-medium py-2.5 px-5"
+          style={{ left: pointer.x + 20, top: pointer.y + 20 }}
+        >
+          Know more →
+        </div>
+      )}
     </section>
   );
 }
