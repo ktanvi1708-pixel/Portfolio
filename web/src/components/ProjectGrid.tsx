@@ -59,11 +59,11 @@ export default function ProjectGrid() {
                 onMouseEnter={() => setActiveIndex(i)}
                 onFocus={() => setActiveIndex(i)}
                 onBlur={() => setActiveIndex(null)}
-                className="relative flex items-center py-8 md:py-10 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
+                className="relative flex items-center py-5 md:py-6 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
               >
                 <span
                   aria-hidden="true"
-                  className={`hidden md:inline-block font-semibold text-3xl text-accent transition-all duration-500 ease-out ${
+                  className={`hidden md:inline-block font-semibold text-xl text-accent transition-all duration-500 ease-out ${
                     active ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                   }`}
                 >
@@ -71,32 +71,11 @@ export default function ProjectGrid() {
                 </span>
 
                 <div
-                  className={`transition-transform duration-500 ease-out ${
-                    active ? 'translate-x-0 md:translate-x-16' : 'translate-x-0'
+                  className={`font-semibold leading-[1.1] tracking-[-0.01em] text-[clamp(1.5rem,2.6vw,2.5rem)] transition-all duration-500 ease-out ${
+                    active ? 'translate-x-0 md:translate-x-12 text-ink-a/100' : 'translate-x-0 text-ink-a/25'
                   }`}
                 >
-                  <div
-                    className={`font-semibold leading-[0.95] tracking-[-0.02em] text-[clamp(2.2rem,5vw,4.5rem)] transition-colors duration-500 ease-out ${
-                      active ? 'text-ink-a/100' : 'text-ink-a/25'
-                    }`}
-                  >
-                    {p.title}
-                  </div>
-
-                  <div
-                    className="grid transition-[grid-template-rows] duration-500 ease-out"
-                    style={{ gridTemplateRows: active ? '1fr' : '0fr' }}
-                  >
-                    <div className="overflow-hidden">
-                      <p
-                        className={`max-w-2xl mt-0 text-[17px] font-medium text-muted transition-opacity duration-500 ease-out ${
-                          active ? 'opacity-100 mt-6' : 'opacity-0'
-                        }`}
-                      >
-                        {p.desc}
-                      </p>
-                    </div>
-                  </div>
+                  {p.shortTitle}
                 </div>
               </a>
 

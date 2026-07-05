@@ -53,6 +53,9 @@ export type Project = {
   id: string;
   tags: FilterKey[];
   domain: string;
+  /** Short name shown in the Selected Work hover list. */
+  shortTitle: string;
+  /** Full name shown in the tilted preview card and elsewhere. */
   title: string;
   desc: string;
   meta: string;
@@ -64,6 +67,7 @@ export const projects: Project[] = [
     id: 'proj-crushcup',
     tags: ['service-design', 'ux-research'],
     domain: 'Service Design · Research',
+    shortTitle: 'Crush Cup',
     title: 'Crush Cup: Revival of the Terracotta',
     desc: 'Redesigning takeaway coffee culture in the UK through a sustainable terracotta cup service system. Masters thesis. CEA Prize winner.',
     meta: 'GSA, Scotland · 2023',
@@ -73,6 +77,7 @@ export const projects: Project[] = [
     id: 'proj-nexushift',
     tags: ['service-design', 'ux-research'],
     domain: 'Service Design · Fintech',
+    shortTitle: 'NexuShift',
     title: 'NexuShift: Fair Finance in the UK',
     desc: 'A service design intervention addressing financial exclusion for underserved communities in the UK. System mapping, co-design workshops.',
     meta: 'UK · 2023',
@@ -82,6 +87,7 @@ export const projects: Project[] = [
     id: 'proj-adanione',
     tags: ['ux-research'],
     domain: 'UX Research · Usability Study',
+    shortTitle: 'AdaniOne',
     title: 'AdaniOne — UX Research & Usability Study',
     desc: "End-to-end usability research for India's largest airport super-app across 5 archetypes.",
     meta: 'India · 2024',
@@ -91,6 +97,7 @@ export const projects: Project[] = [
     id: 'proj-noir',
     tags: ['ui-ux'],
     domain: 'UI/UX · Web Design',
+    shortTitle: 'Noir Beauty',
     title: 'Noir Beauty',
     desc: 'A minimalist beauty webpage redefining luxury through clean graphics, soft pastels, and deliberate negative space.',
     meta: 'Web · 2024',
@@ -100,6 +107,7 @@ export const projects: Project[] = [
     id: 'proj-pricegenius',
     tags: ['ui-ux'],
     domain: 'UI/UX · B2B · Enterprise',
+    shortTitle: 'PriceGenius.AI',
     title: 'PriceGenius.AI — Sirius DigiTech',
     desc: 'Live product webpage for an enterprise AI procurement forecaster. Contributed to a 15% increase in client acquisition.',
     meta: 'Web · 2024',
@@ -109,6 +117,7 @@ export const projects: Project[] = [
     id: 'proj-sirius',
     tags: ['ui-ux'],
     domain: 'UI/UX · Industrial AI',
+    shortTitle: 'Sirius DigiTech',
     title: 'Sirius DigiTech — Homepage',
     desc: 'Flagship homepage unifying 7 enterprise-scale AI products for energy, aviation, and industrial operations.',
     meta: 'Web · 2024',
@@ -118,6 +127,7 @@ export const projects: Project[] = [
     id: 'proj-alife',
     tags: ['packaging'],
     domain: 'Packaging Design',
+    shortTitle: 'Alife',
     title: 'Alife — Soap & Hand Sanitiser',
     desc: 'Packaging identity rooted in clean living and minimal material waste.',
     meta: '2022',
@@ -127,6 +137,7 @@ export const projects: Project[] = [
     id: 'proj-vedas',
     tags: ['packaging'],
     domain: 'Packaging Design',
+    shortTitle: 'The Vedas',
     title: 'The Vedas — Green Tea',
     desc: 'Packaging design drawing from ancient Indian philosophy and botanical illustration.',
     meta: '2022',
@@ -136,6 +147,7 @@ export const projects: Project[] = [
     id: 'proj-greendot',
     tags: ['branding'],
     domain: 'Branding · Identity',
+    shortTitle: 'Green Dot Agro',
     title: 'Green Dot Agro Pvt. Ltd.',
     desc: 'Brand identity for an agritech company — balancing trust, modernity, and agricultural rootedness.',
     meta: '2022',
@@ -145,6 +157,7 @@ export const projects: Project[] = [
     id: 'proj-xlr8',
     tags: ['branding'],
     domain: 'Branding · Aerospace',
+    shortTitle: 'XLR8 Aerospace',
     title: 'XLR8 Aerospace',
     desc: 'Brand identity for an aerospace startup — precision, ambition, and futurism.',
     meta: '2023',
