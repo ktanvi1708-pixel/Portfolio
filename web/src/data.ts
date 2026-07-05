@@ -60,6 +60,8 @@ export type Project = {
   desc: string;
   meta: string;
   cta: string;
+  /** Path under public/ to a real project screenshot, if one exists yet. */
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -102,6 +104,7 @@ export const projects: Project[] = [
     desc: 'A minimalist beauty webpage redefining luxury through clean graphics, soft pastels, and deliberate negative space.',
     meta: 'Web · 2024',
     cta: 'View Prototype →',
+    image: '/work/noir-beauty.png',
   },
   {
     id: 'proj-pricegenius',

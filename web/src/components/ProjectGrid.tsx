@@ -82,19 +82,31 @@ export default function ProjectGrid() {
               {/* Tilted preview card, desktop only */}
               <div
                 aria-hidden="true"
-                className={`hidden md:flex pointer-events-none absolute top-1/2 right-[6%] -translate-y-1/2 rotate-[4deg] w-80 aspect-[4/5] flex-col bg-surface border border-hairline shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out ${
+                className={`hidden md:flex pointer-events-none absolute top-1/2 right-[6%] -translate-y-1/2 rotate-[4deg] w-96 flex-col bg-surface border border-hairline shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out ${
                   active ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
                 }`}
               >
-                <div className="p-7 flex flex-col gap-2 flex-1">
+                <div className="p-7 flex flex-col gap-3">
                   <div className="font-semibold text-[11px] tracking-[0.06em] uppercase text-accent">
                     {p.domain}
                   </div>
                   <div className="font-semibold text-lg leading-[1.3]">{p.title}</div>
-                  <div className="flex-1 mt-2 border border-dashed border-hairline flex items-center justify-center text-muted text-xs">
-                    Preview
+                  <div
+                    className={`w-full aspect-video overflow-hidden flex items-center justify-center text-muted text-xs ${
+                      p.image ? '' : 'border border-dashed border-hairline'
+                    }`}
+                  >
+                    {p.image ? (
+                      <img
+                        src={p.image}
+                        alt={`${p.title} screenshot`}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      'Preview'
+                    )}
                   </div>
-                  <div className="flex justify-between text-xs text-muted mt-2">
+                  <div className="flex justify-between text-xs text-muted">
                     <span>{p.meta}</span>
                     <span className="text-accent font-semibold">{p.cta}</span>
                   </div>
