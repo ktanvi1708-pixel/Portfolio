@@ -84,6 +84,7 @@ export const projects: Project[] = [
     desc: 'A service design intervention addressing financial exclusion for underserved communities in the UK. System mapping, co-design workshops.',
     meta: 'UK · 2023',
     cta: '9 min read →',
+    image: '/work/nexushift.png',
   },
   {
     id: 'proj-adanione',
@@ -94,6 +95,7 @@ export const projects: Project[] = [
     desc: "End-to-end usability research for India's largest airport super-app across 5 archetypes.",
     meta: 'India · 2024',
     cta: '8 min read →',
+    image: '/work/adanione.png',
   },
   {
     id: 'proj-noir',
@@ -115,6 +117,7 @@ export const projects: Project[] = [
     desc: 'Live product webpage for an enterprise AI procurement forecaster. Contributed to a 15% increase in client acquisition.',
     meta: 'Web · 2024',
     cta: 'View Live →',
+    image: '/work/pricegenius-ai.png',
   },
   {
     id: 'proj-sirius',
@@ -125,6 +128,7 @@ export const projects: Project[] = [
     desc: 'Flagship homepage unifying 7 enterprise-scale AI products for energy, aviation, and industrial operations.',
     meta: 'Web · 2024',
     cta: 'View Live →',
+    image: '/work/sirius-digitech.png',
   },
   {
     id: 'proj-alife',
@@ -135,6 +139,7 @@ export const projects: Project[] = [
     desc: 'Packaging identity rooted in clean living and minimal material waste.',
     meta: '2022',
     cta: '5 min read →',
+    image: '/work/alife.png',
   },
   {
     id: 'proj-vedas',
@@ -145,6 +150,7 @@ export const projects: Project[] = [
     desc: 'Packaging design drawing from ancient Indian philosophy and botanical illustration.',
     meta: '2022',
     cta: '4 min read →',
+    image: '/work/the-vedas.png',
   },
   {
     id: 'proj-greendot',
@@ -155,6 +161,7 @@ export const projects: Project[] = [
     desc: 'Brand identity for an agritech company — balancing trust, modernity, and agricultural rootedness.',
     meta: '2022',
     cta: '4 min read →',
+    image: '/work/green-dot-agro.png',
   },
   {
     id: 'proj-xlr8',
@@ -165,6 +172,7 @@ export const projects: Project[] = [
     desc: 'Brand identity for an aerospace startup — precision, ambition, and futurism.',
     meta: '2023',
     cta: '3 min read →',
+    image: '/work/xlr8-aerospace.png',
   },
 ];
 
