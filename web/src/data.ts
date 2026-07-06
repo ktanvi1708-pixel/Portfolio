@@ -74,6 +74,7 @@ export const projects: Project[] = [
     desc: 'Redesigning takeaway coffee culture in the UK through a sustainable terracotta cup service system. Masters thesis. CEA Prize winner.',
     meta: 'GSA, Scotland · 2023',
     cta: '7 min read →',
+    image: '/work/crush-cup.png',
   },
   {
     id: 'proj-nexushift',
