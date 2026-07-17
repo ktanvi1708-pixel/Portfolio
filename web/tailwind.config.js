@@ -22,9 +22,14 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '.25' },
         },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
         pulseDot: 'pulseDot 2s ease-in-out infinite',
+        blink: 'blink 1s step-end infinite',
       },
     },
   },

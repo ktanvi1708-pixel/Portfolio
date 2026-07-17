@@ -7,7 +7,9 @@ export default function Footer() {
         </h2>
         <div className="flex flex-col gap-3 items-end">
           <a
-            href="#"
+            href="https://wa.me/919512551116"
+            target="_blank"
+            rel="noreferrer"
             className="text-[15px] text-ink no-underline border-b border-hairline pb-0.5 whitespace-nowrap"
           >
             WhatsApp →
@@ -26,7 +28,12 @@ export default function Footer() {
           >
             LinkedIn →
           </a>
-          <a href="#" className="text-[15px] font-semibold text-accent no-underline whitespace-nowrap">
+          <a
+            href="https://drive.google.com/uc?export=download&id=1xYbrxgV01DuNOrLBiMw13GjOr5wk_wTR"
+            target="_blank"
+            rel="noreferrer"
+            className="text-[15px] font-semibold text-accent no-underline whitespace-nowrap"
+          >
             Download CV ↓
           </a>
         </div>

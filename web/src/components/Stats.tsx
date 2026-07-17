@@ -2,7 +2,7 @@ import { aboutStats } from '../data';
 
 export default function Stats() {
   return (
-    <section className="px-12 pb-24 border-t border-hairline box-border">
+    <section className="px-12 border-t border-hairline box-border">
       <div className="grid grid-cols-2 sm:grid-cols-4">
         {aboutStats.map((stat, i) => (
           <div

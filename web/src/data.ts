@@ -33,20 +33,20 @@ export const workEntries: WorkEntry[] = [
 ];
 
 export type FilterKey =
-  | 'all'
   | 'ux-research'
   | 'service-design'
   | 'ui-ux'
   | 'branding'
-  | 'packaging';
+  | 'packaging'
+  | 'figma';
 
 export const filterTabsBase: { key: FilterKey; label: string }[] = [
-  { key: 'all', label: 'All Work' },
   { key: 'ux-research', label: 'UX Research' },
   { key: 'service-design', label: 'Service Design' },
   { key: 'ui-ux', label: 'UI/UX' },
   { key: 'branding', label: 'Branding' },
   { key: 'packaging', label: 'Packaging' },
+  { key: 'figma', label: 'Figma' },
 ];
 
 export type Project = {
@@ -62,6 +62,8 @@ export type Project = {
   cta: string;
   /** Path under public/ to a real project screenshot, if one exists yet. */
   image?: string;
+  /** External URL (e.g. a Figma prototype) the project row links out to. */
+  link?: string;
 };
 
 export const projects: Project[] = [
@@ -174,6 +176,150 @@ export const projects: Project[] = [
     meta: '2023',
     cta: '3 min read →',
     image: '/work/xlr8-aerospace.png',
+  },
+  {
+    id: 'proj-figma-collection',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Collection',
+    title: 'A Collection Built Around Choice',
+    desc: 'A product collection interface designed around flexible customization and clear visual choice.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/a-collection-built-around-choice.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=1016-44&viewport=584%2C466%2C0.09&t=pG5kuRAklTvZ6YqG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1009%3A179&page-id=1008%3A19',
+  },
+  {
+    id: 'proj-figma-bicycle',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Bicycle Customization',
+    title: 'Bicycle Customization Experience',
+    desc: 'An interactive configurator letting riders build and preview a custom bicycle in real time.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/bicycle-customization-experience.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=625-21&viewport=515%2C230%2C0.04&t=CsTOOdPKvsP3cDeq-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=613%3A167&desktop-link-click-timestamp=1783787160925&desktop-ul-exp-bucket=V&page-id=610%3A119',
+  },
+  {
+    id: 'proj-figma-veggie',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Veggie Shopping',
+    title: 'Daily Veggie Shopping Experience',
+    desc: 'A grocery app concept streamlining daily fresh-produce shopping with fast, visual browsing.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/daily-veggie-shopping-experience.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=3345-530&viewport=-2129%2C-1478%2C0.16&t=oDpgW3xgmFB6q5RE-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3406%3A542&show-proto-sidebar=1&desktop-link-click-timestamp=1783787185289&desktop-ul-exp-bucket=V&page-id=1252%3A2',
+  },
+  {
+    id: 'proj-figma-runway',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Fashion Runway',
+    title: 'Fashion Runway Experience',
+    desc: 'An immersive digital runway experience translating fashion week energy into a mobile interface.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/fashion-runway-experience.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=1124-3229&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1124%3A3229&desktop-link-click-timestamp=1783787204629&desktop-ul-exp-bucket=V&page-id=1119%3A8258&t=x6pwGBS3CQKEtL7u-',
+  },
+  {
+    id: 'proj-figma-halo',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'HALO Headphones',
+    title: 'HALO Headphones',
+    desc: 'A product landing page for a premium headphone brand, built around sound, form, and focus.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/halo-headphones.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=471-48&viewport=164%2C26%2C0.09&t=7TCFtr4edtjw4EYW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=470%3A6172&desktop-link-click-timestamp=1783787228819&desktop-ul-exp-bucket=V&page-id=443%3A372&show-proto-sidebar=1',
+  },
+  {
+    id: 'proj-figma-icecream',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Ice Cream Selection',
+    title: 'Ice Cream Selection',
+    desc: 'A playful ordering flow for building a custom ice cream, from base to toppings.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/ice-cream-selection.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=1102-141&starting-point-node-id=1096%3A18&scaling=scale-down&content-scaling=fixed&t=TRbVfEnHlt1asYwG-1&desktop-link-click-timestamp=1783787287155&desktop-ul-exp-bucket=V&page-id=1095%3A17',
+  },
+  {
+    id: 'proj-figma-feedback',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Feedback, Humanized',
+    title: 'Making Feedback Feel Human',
+    desc: 'A feedback collection flow redesigned to feel conversational rather than transactional.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/making-feedback-feel-human.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=3639-845&t=gkqeac3MvfW9xkKE-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3639%3A845&show-proto-sidebar=1&desktop-link-click-timestamp=1783787311282&desktop-ul-exp-bucket=V&page-id=1252%3A2',
+  },
+  {
+    id: 'proj-figma-travel',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Travel Discovery',
+    title: 'Motion-Driven Travel Discovery',
+    desc: 'A motion-first travel app concept using movement and transition to guide destination discovery.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/motion-driven-travel-discovery.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=418-2&viewport=661%2C159%2C0.1&t=PnwXLvWT8vIAjqZZ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A2&desktop-link-click-timestamp=1783787335909&desktop-ul-exp-bucket=V&page-id=416%3A10',
+  },
+  {
+    id: 'proj-figma-motionbrands',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Motion-Led Branding',
+    title: 'Motion-Led Design for Modern Brands',
+    desc: 'A motion design system exploring how modern brands can express identity through movement.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/motion-led-design-for-modern-brands.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=284-534&viewport=694%2C-57%2C0.15&t=9Djx1JGVTGdRuKnU-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=284%3A634&show-proto-sidebar=1&page-id=282%3A92',
+  },
+  {
+    id: 'proj-figma-hackathon',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Engagement Hackathon',
+    title: 'Nationwide Engagement Hackathon',
+    desc: 'A hackathon platform concept designed to drive nationwide participation and engagement.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/nationwide-engagement-hackathon.png',
+    link: 'https://www.figma.com/proto/GwVmrbs6VcLhxGJDvL2cib/Tarkash-Website?node-id=161-204&viewport=2135%2C248%2C0.07&t=QbupapKXLv4n50Py-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=44%3A147&desktop-link-click-timestamp=1783787356489&desktop-ul-exp-bucket=V&page-id=0%3A1',
+  },
+  {
+    id: 'proj-figma-smoothie',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Pure Smoothie',
+    title: 'Pure Smoothie Experience',
+    desc: 'An ordering experience for a smoothie brand centered on freshness, simplicity, and speed.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/pure-smoothie-experience.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=3581-1493&viewport=603%2C-1055%2C0.11&t=YHFDSZXzqHcif2E4-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3581%3A1493&show-proto-sidebar=1&desktop-link-click-timestamp=1783787378130&desktop-ul-exp-bucket=V&page-id=560%3A2',
+  },
+  {
+    id: 'proj-figma-yogurt',
+    tags: ['figma'],
+    domain: 'Figma · UI/UX',
+    shortTitle: 'Yogurt Project',
+    title: 'Yogurt Project',
+    desc: 'A brand and product interface exploration for a yogurt line, balancing warmth and clarity.',
+    meta: 'Figma',
+    cta: 'View Prototype →',
+    image: '/work/figma/yogurt-project.png',
+    link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=4000-305&viewport=393%2C-791%2C0.05&t=iWueF9V5zv7Hh6j7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4000%3A167&show-proto-sidebar=1&page-id=610%3A119',
   },
 ];
 

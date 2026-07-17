@@ -2,12 +2,11 @@ import { useState, type MouseEvent } from 'react';
 import { filterTabsBase, projects, type FilterKey } from '../data';
 
 export default function ProjectGrid() {
-  const [filter, setFilter] = useState<FilterKey>('all');
+  const [filter, setFilter] = useState<FilterKey>(filterTabsBase[0].key);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [pointer, setPointer] = useState<{ x: number; y: number } | null>(null);
 
-  const filteredProjects =
-    filter === 'all' ? projects : projects.filter((p) => p.tags.includes(filter));
+  const filteredProjects = projects.filter((p) => p.tags.includes(filter));
 
   const handleFilterChange = (key: FilterKey) => {
     setFilter(key);
@@ -55,7 +54,8 @@ export default function ProjectGrid() {
           return (
             <li key={p.id} className={`group relative border-t border-hairline last:border-b ${active ? 'z-30' : 'z-0'}`}>
               <a
-                href="#"
+                href={p.link ?? '#'}
+                {...(p.link ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 onMouseEnter={() => setActiveIndex(i)}
                 onFocus={() => setActiveIndex(i)}
                 onBlur={() => setActiveIndex(null)}
