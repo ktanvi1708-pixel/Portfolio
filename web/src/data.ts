@@ -91,6 +91,7 @@ export const projects: Project[] = [
     meta: 'UK · 2023',
     cta: '9 min read →',
     image: '/work/nexushift.png',
+    detailSlug: 'nexushift',
   },
   {
     id: 'proj-adanione',
