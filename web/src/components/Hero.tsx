@@ -1,4 +1,5 @@
 import { useTypewriter } from '../hooks/useTypewriter';
+import { fireConfetti } from '../lib/confetti';
 
 const DESIGNATIONS = [
   { line1: 'UI / UX', line2: 'Designer' },
@@ -66,9 +67,9 @@ export default function Hero() {
           See my work →
         </a>
         <a
-          href="https://drive.google.com/uc?export=download&id=1xYbrxgV01DuNOrLBiMw13GjOr5wk_wTR"
-          target="_blank"
-          rel="noreferrer"
+          href="/cv/tanvi-kumar-cv.pdf"
+          download="Tanvi-Kumar-CV.pdf"
+          onClick={() => fireConfetti()}
           className="font-medium text-sm text-ink no-underline border-b-[1.5px] border-ink pb-[3px] whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
         >
           Download CV

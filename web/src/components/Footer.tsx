@@ -1,3 +1,5 @@
+import { fireConfetti } from '../lib/confetti';
+
 export default function Footer() {
   return (
     <footer id="contact" aria-label="Contact" className="border-t border-hairline px-12 pt-20 pb-8">
@@ -29,9 +31,9 @@ export default function Footer() {
             LinkedIn →
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=1xYbrxgV01DuNOrLBiMw13GjOr5wk_wTR"
-            target="_blank"
-            rel="noreferrer"
+            href="/cv/tanvi-kumar-cv.pdf"
+            download="Tanvi-Kumar-CV.pdf"
+            onClick={() => fireConfetti()}
             className="text-[15px] font-semibold text-accent no-underline whitespace-nowrap"
           >
             Download CV ↓

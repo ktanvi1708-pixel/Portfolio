@@ -1,3 +1,5 @@
+import { spawnPostIts } from '../lib/postIts';
+
 export default function About() {
   return (
     <section id="about" aria-label="About" className="px-12 pb-24 border-t border-hairline">
@@ -6,9 +8,11 @@ export default function About() {
         <div className="flex-1 h-px bg-hairline" />
       </div>
       <h2 className="font-semibold text-[clamp(2rem,4.5vw,3.6rem)] m-0 mb-14 leading-[1.1]">
-        Research-led.
+        Research-led. Story-driven.
         <br />
-        Story-driven.
+        <span onMouseEnter={() => spawnPostIts()} className="cursor-default">
+          Occasionally covered in post-it notes.
+        </span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-[380px_1fr] gap-12 items-start">
