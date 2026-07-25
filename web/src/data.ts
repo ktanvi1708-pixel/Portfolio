@@ -103,6 +103,7 @@ export const projects: Project[] = [
     meta: 'India · 2024',
     cta: '8 min read →',
     image: '/work/adanione.png',
+    detailSlug: 'adanione',
   },
   {
     id: 'proj-noir',
