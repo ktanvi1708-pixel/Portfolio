@@ -159,6 +159,7 @@ export const projects: Project[] = [
     meta: '2022',
     cta: '4 min read →',
     image: '/work/the-vedas.png',
+    detailSlug: 'the-vedas',
   },
   {
     id: 'proj-greendot',
