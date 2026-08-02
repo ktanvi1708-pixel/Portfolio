@@ -4,6 +4,7 @@ import CrushCupDetail from './CrushCupDetail';
 import NexuShiftDetail from './NexuShiftDetail';
 import AdaniOneDetail from './AdaniOneDetail';
 import TheVedasDetail from './TheVedasDetail';
+import AlifeDetail from './AlifeDetail';
 
 type CaseStudyPageProps = {
   theme: 'light' | 'dark';
@@ -15,6 +16,7 @@ const caseStudyPages: Record<string, ComponentType<CaseStudyPageProps>> = {
   nexushift: NexuShiftDetail,
   adanione: AdaniOneDetail,
   'the-vedas': TheVedasDetail,
+  alife: AlifeDetail,
 };
 
 export default function ProjectDetail({ theme, onToggleTheme }: CaseStudyPageProps) {

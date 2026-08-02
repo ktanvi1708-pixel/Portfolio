@@ -15,12 +15,14 @@ export default function TheVedasDetail({ theme, onToggleTheme }: TheVedasDetailP
       <DetailNav theme={theme} onToggleTheme={onToggleTheme} />
 
       <div className="max-w-[1242px] mx-auto px-6 sm:px-12">
-        <div className="pt-16 pb-12">
-          <h1 className="font-semibold text-2xl md:text-[28px] text-ink text-center m-0 mb-24">{title}</h1>
+        <div className="pt-16 pb-12 text-center">
+          <h1 className="font-semibold text-2xl md:text-[28px] text-ink m-0 mb-24">{title}</h1>
           <h2 className="font-semibold text-base m-0 mb-3" style={{ color: '#BBD190' }}>
             About the Project:
           </h2>
-          <p className="text-sm md:text-[15px] leading-[1.7] text-muted max-w-[720px] m-0">{aboutParagraph}</p>
+          <p className="text-sm md:text-[15px] leading-[1.7] text-muted max-w-[720px] mx-auto m-0">
+            {aboutParagraph}
+          </p>
         </div>
 
         <div className="flex flex-col">
