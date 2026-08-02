@@ -1,12 +1,17 @@
-export const title = 'Crush Cup: Revival of the Terracotta';
+export const title = 'Crush Cup : Revival of the Terracotta';
 
-export const thesisHref = '/work/crush-cup/crush-cup-thesis.pdf';
+export const subtitle =
+  'Masters Degree Thesis Project - GSA, Scotland, UK | Creative Enterprise Awardee 2023 (CEA) Prize Winner';
+
+export const thesisLabel = 'Click to read thesis pdf in detail';
+export const thesisHref = 'https://drive.google.com/file/d/1C4iIUwkRWXF3Y-F3Mjh4E5gkFCiz-FXt/view';
+
+export const heroImage = {
+  src: '/work/crush-cup/hero-shards-to-cup.webp',
+  alt: 'Split image: broken orange terracotta shards scattered on the ground on the left, an arrow pointing across to a latte served in a terracotta cup on the right.',
+};
 
 export const slides: { src: string; alt: string }[] = [
-  {
-    src: '/work/crush-cup/slide-01.webp',
-    alt: "Title slide: 'Crush Cup: Revival of the Terracotta', a Masters thesis project at GSA Scotland and Creative Enterprise Award prize winner, showing broken terracotta shards on the left transforming into a latte served in a terracotta cup on the right.",
-  },
   {
     src: '/work/crush-cup/slide-02.webp',
     alt: "Project Background, Stage 1: paragraph on the UK's 2.5 billion discarded coffee cups and the proposal to draw on India's kullad and Bhar cup tradition, beside a photo of rows of terracotta cups drying at an Indian kiln.",

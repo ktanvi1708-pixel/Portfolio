@@ -35,7 +35,7 @@ export default function AlifeDetail({ theme, onToggleTheme }: AlifeDetailProps) 
           </a>
         </div>
 
-        <Reveal className="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-10 items-center pb-4">
+        <Reveal className="grid grid-cols-1 md:grid-cols-[1fr_500px] gap-10 items-center pb-4">
           <div>
             <h2 className="font-semibold text-base m-0 mb-3" style={{ color: OBJECTIVE_COLOR }}>
               About the Project:
