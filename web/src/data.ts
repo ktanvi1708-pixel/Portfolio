@@ -36,7 +36,6 @@ export type FilterKey =
   | 'ux-research'
   | 'service-design'
   | 'ui-ux'
-  | 'branding'
   | 'packaging'
   | 'figma';
 
@@ -44,7 +43,6 @@ export const filterTabsBase: { key: FilterKey; label: string }[] = [
   { key: 'ux-research', label: 'UX Research' },
   { key: 'service-design', label: 'Service Design' },
   { key: 'ui-ux', label: 'UI/UX' },
-  { key: 'branding', label: 'Branding' },
   { key: 'packaging', label: 'Packaging' },
   { key: 'figma', label: 'Figma' },
 ];
@@ -115,6 +113,7 @@ export const projects: Project[] = [
     meta: 'Web · 2024',
     cta: 'View Prototype →',
     image: '/work/noir-beauty.png',
+    link: 'https://www.figma.com/proto/KdFTvfhaz7sXoKoziByefo/Email-Design?node-id=4-62&t=VxyIA3Tznw03OLCG-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A62',
   },
   {
     id: 'proj-pricegenius',
@@ -126,6 +125,7 @@ export const projects: Project[] = [
     meta: 'Web · 2024',
     cta: 'View Live →',
     image: '/work/pricegenius-ai.png',
+    link: 'https://www.figma.com/proto/37iQcq2xiWsJgDQfEEz76y/Sirius-Digitech-Webpages?node-id=10659-379&t=wG6mNJQMkyGtyaXL-1&scaling=scale-down-width&content-scaling=fixed&page-id=10659%3A375&starting-point-node-id=10659%3A379',
   },
   {
     id: 'proj-sirius',
@@ -137,6 +137,7 @@ export const projects: Project[] = [
     meta: 'Web · 2024',
     cta: 'View Live →',
     image: '/work/sirius-digitech.png',
+    link: 'https://www.figma.com/proto/37iQcq2xiWsJgDQfEEz76y/Sirius-Digitech-Webpages?node-id=10659-379&t=wG6mNJQMkyGtyaXL-1&scaling=scale-down-width&content-scaling=fixed&page-id=10659%3A375&starting-point-node-id=10659%3A379',
   },
   {
     id: 'proj-alife',
@@ -161,28 +162,6 @@ export const projects: Project[] = [
     cta: '4 min read →',
     image: '/work/the-vedas.png',
     detailSlug: 'the-vedas',
-  },
-  {
-    id: 'proj-greendot',
-    tags: ['branding'],
-    domain: 'Branding · Identity',
-    shortTitle: 'Green Dot Agro',
-    title: 'Green Dot Agro Pvt. Ltd.',
-    desc: 'Brand identity for an agritech company — balancing trust, modernity, and agricultural rootedness.',
-    meta: '2022',
-    cta: '4 min read →',
-    image: '/work/green-dot-agro.png',
-  },
-  {
-    id: 'proj-xlr8',
-    tags: ['branding'],
-    domain: 'Branding · Aerospace',
-    shortTitle: 'XLR8 Aerospace',
-    title: 'XLR8 Aerospace',
-    desc: 'Brand identity for an aerospace startup — precision, ambition, and futurism.',
-    meta: '2023',
-    cta: '3 min read →',
-    image: '/work/xlr8-aerospace.png',
   },
   {
     id: 'proj-figma-collection',

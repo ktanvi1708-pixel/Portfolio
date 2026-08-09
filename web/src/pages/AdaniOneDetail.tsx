@@ -118,7 +118,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/research-objective.webp"
             alt="Research Objective: what is AdaniOne solving as an app (7 major problems including airport confusion, fragmented services, scattered travel ecosystem), what is not unique and highly competitive (flight, hotel, bus/train bookings), user needs listing across six categories, and what is already solved vs unique to Adani One across five value propositions."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
           />
         </Reveal>
 
@@ -137,7 +137,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/personas.webp"
             alt="User Personas and Archetypes: five persona cards — Busy Business Travellers (Rohan Mehta), Deal-Seeker Duty-Free Shoppers (Arjun Khurana), Rail-to-Air Connectors / Multi-modal Planners (Pooja Iyer), Occasional Family Fliers (Neha Patel), and Rewards-Maximizers / Payments-first Users (Vikram Sinha) — each with name, role, age, location, quote, behavioural considerations, frustrations, goals and tasks."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
           />
         </Reveal>
 
@@ -152,7 +152,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/reviews.webp"
             alt="Reviews: 4.4 star rating from 25.8K reviews. A list of largely negative Play Store reviews describing refund process complaints, missing customer support, missing email verification, and payment failures."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
           />
         </Reveal>
 
@@ -160,7 +160,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/thought-process.webp"
             alt="Thought Process and Dump: a whiteboard of annotated app screenshots and sticky notes exploring refund flow, third-party integration, coupon logic, and plan comparisons, connected with arrows."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
           />
           <a href={researchBoardHref} target="_blank" rel="noreferrer" className={buttonPrimary} style={{ backgroundColor: PURPLE }}>
             View Full Research Board
@@ -204,7 +204,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/partnerships.webp"
             alt="Partnerships: 'Who powers each experience | Ecosystem & dependency mapping' — a map showing which parts of the Adani One experience are controlled internally vs by partners (ClearTrip, Uber, ICICI, ONDC, UPI/NPCI, Wallets), plus a table of 11 features/flows with partner/system, what they control, control level, error responsibility, and risk zones."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
           />
         </Reveal>
 
@@ -216,7 +216,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/puzzle.webp"
             alt="Puzzle piece illustration: Payment gateways, Airline Systems, and Airport Vendors pieces assembling together with the adani logo piece into one complete four-piece puzzle, representing the orchestration platform."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
           />
         </Reveal>
 
@@ -231,7 +231,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/flight-booking-1way.webp"
             alt="Flight Travel Booking (1 Way Trip): full screenshot walkthrough from search to payment, including flight search results, review flight details, coupon application, traveller details, seat selection, meal and baggage add-ons, payment options, and a booking pending confirmation screen."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
             loading="lazy"
           />
         </Reveal>
@@ -240,7 +240,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/flight-booking-roundtrip.webp"
             alt="Flight Travel Booking (Round Trip): full screenshot walkthrough for a round-trip booking, including departure and arrival city selection, date selection, traveller count, review of both departing and return flight details, insurance, cancellation policy, seat and meal add-ons, and payment."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
             loading="lazy"
           />
         </Reveal>
@@ -249,7 +249,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/flight-flowcharts.webp"
             alt="Flowcharts for Flight Travel Booking, 2-way trip and round trip, showing the normal flow, second attempt, and first failure attempt paths with colour-coded arrows (grey normal, blue second attempt, red first failure) through the booking steps."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
             loading="lazy"
           />
         </Reveal>
@@ -258,7 +258,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/fnb-collect-counter.webp"
             alt="F&B Flow (Collect at Outlet): screenshot walkthrough of pre-ordering food to collect at an airport counter, from browsing restaurants and dishes through cart, billing details, coupon applied confirmation, payment, and order pending confirmation."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
             loading="lazy"
           />
         </Reveal>
@@ -267,7 +267,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/fnb-delivery-gate.webp"
             alt="F&B Flow (Delivery at Gate): screenshot walkthrough of ordering food for delivery to the boarding gate, from browsing delivering-in-15-minutes items through cart, traveller and boarding gate details, coupon applied confirmation, payment, and order pending confirmation."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
             loading="lazy"
           />
         </Reveal>
@@ -276,7 +276,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/fnb-flowcharts.webp"
             alt="Flowcharts for F&B collect-at-counter flow and F&B delivery-at-gate flow, showing normal, retry, and failure paths through order placement, payment, and fulfilment steps."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
             loading="lazy"
           />
         </Reveal>
@@ -292,7 +292,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/risk-table.webp"
             alt="Table of Journey, Trust Risk, Business Impact, and Priority: Payments & Refunds (Very High, Very High, Immediate); Flight Booking Retry & Pending (Very High, High, Immediate); Airport F&B Fulfilment (High, Medium, Short-term); Lounge Access (Medium, Medium, Medium-term)."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[847px]"
           />
         </Reveal>
 
@@ -306,7 +306,7 @@ export default function AdaniOneDetail({
           <img
             src="/work/adanione/impact.webp"
             alt="How This Research Creates Impact: Product Decisions (identify friction points, improve form design, prioritise usability fixes, align with user mental models, validate feature discoverability), Business Decisions (higher booking completion, reduced payment failures, better retention, increased trust, clear sprint prioritisation), and User Experience Impact (faster booking flows, less confusion, higher payment confidence, more predictable experience, feeling the app is well thought out)."
-            className="w-full h-auto block mx-auto"
+            className="w-full h-auto block mx-auto max-w-[900px]"
           />
         </Reveal>
 
