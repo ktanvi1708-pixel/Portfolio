@@ -37,7 +37,8 @@ export type FilterKey =
   | 'service-design'
   | 'ui-ux'
   | 'packaging'
-  | 'figma';
+  | 'figma'
+  | 'branding';
 
 export const filterTabsBase: { key: FilterKey; label: string }[] = [
   { key: 'ux-research', label: 'UX Research' },
@@ -45,6 +46,7 @@ export const filterTabsBase: { key: FilterKey; label: string }[] = [
   { key: 'ui-ux', label: 'UI/UX' },
   { key: 'packaging', label: 'Packaging' },
   { key: 'figma', label: 'Figma' },
+  { key: 'branding', label: 'Branding' },
 ];
 
 export type Project = {
@@ -306,6 +308,18 @@ export const projects: Project[] = [
     cta: 'View Prototype →',
     image: '/work/figma/yogurt-project.png',
     link: 'https://www.figma.com/proto/MOVj036d2JcGSiSkkkqewW/PrimeNG--Copy-?node-id=4000-305&viewport=393%2C-791%2C0.05&t=iWueF9V5zv7Hh6j7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4000%3A167&show-proto-sidebar=1&page-id=610%3A119',
+  },
+  {
+    id: 'proj-greendot',
+    tags: ['branding'],
+    domain: 'Branding · Identity',
+    shortTitle: 'Green Dot Agro',
+    title: 'Green Dot Agro Pvt. Ltd.',
+    desc: 'Brand identity for an agritech company — balancing trust, modernity, and agricultural rootedness.',
+    meta: '2022',
+    cta: '4 min read →',
+    image: '/work/green-dot-agro.png',
+    detailSlug: 'green-dot-agro',
   },
 ];
 
