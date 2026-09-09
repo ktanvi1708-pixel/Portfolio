@@ -106,6 +106,18 @@ export const projects: Project[] = [
     detailSlug: 'adanione',
   },
   {
+    id: 'proj-stratone',
+    tags: ['ui-ux'],
+    domain: 'Cyber Security',
+    shortTitle: 'StratOne',
+    title: 'StratOne — Securing Cyber Physical Systems',
+    desc: 'Live webpage for an OT security consulting firm protecting critical infrastructure — power, ports, and airports.',
+    meta: 'Web · 2026',
+    cta: 'View Live →',
+    image: '/work/stratone.png',
+    link: 'https://www.stratone.com',
+  },
+  {
     id: 'proj-noir',
     tags: ['ui-ux'],
     domain: 'UI/UX · Web Design',
